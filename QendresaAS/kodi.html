@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prezantimi me Tekst dhe Foto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #presentation {
+            display: none;
+        }
+
+        .slide {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .positive {
+            color: green;
+        }
+
+        .negative {
+            color: red;
+        }
+
+        /* Shto këtë stil për të bërë tekstin me ngjyrë të portokalltë */
+        .highlight-orange {
+            color: #ff8c00; /* Ngjyra e portokalltë */
+        }
+
+        /* Shto këtë stil për të bërë foton responsive */
+        .slide img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        /* Shto stil për animacionin kur klikohet fotoja */
+        .slide img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="presentation">
+        <div class="slide positive">
+            <h1 class="highlight-orange">Ndikimi i Teknologjisë në Jetën Tonë</h1>
+            <p class="highlight-orange">Një shqyrtim i ndryshimeve dhe sfidave të teknologjisë</p>
+            <a href="URL-e-fotos-1" data-lightbox="image-1" data-title="Foto për temën 1">
+                <img src="URL-e-fotos-1" alt="Foto për temën 1">
+            </a>
+        </div>
+
+        <div class="slide positive">
+            <h1>Ndikimi Pozitiv i Teknologjisë</h1>
+            <ul>
+                <li>Përmirësimi i komunikimit</li>
+                <li>Zhvillimi i mjeteve shkollore</li>
+                <li>Shpërndarja e informacionit</li>
+            </ul>
+            <a href="URL-e-fotos-2" data-lightbox="image-2" data-title="Foto për temën 2">
+                <img src="URL-e-fotos-2" alt="Foto për temën 2">
+            </a>
+        </div>
+
+        <div class="slide negative">
+            <h1>Sfidat e Teknologjisë</h1>
+            <ul>
+                <li>Kërcënimi i privatësisë</li>
+                <li>Varësia nga teknologjia</li>
+                <li>Ndikimi në shëndetin mendor</li>
+            </ul>
+            <a href="URL-e-fotos-3" data-lightbox="image-3" data-title="Foto për temën 3">
+                <img src="URL-e-fotos-3" alt="Foto për temën 3">
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const presentation = document.getElementById("presentation");
+            presentation.style.display = "block";
+        });
+    </script>
+</body>
+</html>

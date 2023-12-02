@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rreth Nesh</title>
+    <style>
+        /* Resetimi i stilizimeve bazë të faqes */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Stilizimi i elementeve të përgjithshëm */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #c1b5b5;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #header-container {
+            background-color: #423a3a;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+
+         .h1 {
+            background-color: #423a3a;
+            color: #fff;
+            font-size: 18px;
+            font-family: 'FORTE';
+            width: 100%;
+            text-align: center;
+        }
+
+        #photo-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .photo {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #text-container {
+            background-color: #423a3a;
+            color: #fff;
+            width: 80%;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            font-family: 'GUNGSUH';
+        }
+
+        #footer-container {
+            background-color: #423a3a;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #footer-container p {
+            color: #fff;
+        }
+        #header-container {
+            background-color: #423a3a; /* Header background color */
+            width: 100%; /* Full width */
+            padding: 0px; /* Add padding for spacing */
+        }
+    </style>
+</head>
+<body>
+    <div id="header-container"></div>
+        <div class="h1">
+            <h1><i>RRETH NESH</i></h1>
+        </div>
+    </div>
+    <div id="photo-container">
+        <div class="photo">
+            <img src="blloka.jpg" alt="Foto 1">
+        </div>
+        <div class="photo">
+            <img src="ar.jpg" alt="Foto 2">
+        </div>
+        <div class="photo">
+            <img src="kran.jpg" alt="Foto 3">
+        </div>
+    </div>
+    <div id="text-container">
+        <p> Ne kemi një eksperiencë të pasur dhe kemi bërë emër në tregun e materialeve të ndërtimit për cilësinë e lartë dhe shërbimin e shkëlqyeshëm. Nëpërmjet website-it tonë, ju mund të gjeni informacione të detajuara rreth produkteve tona dhe shërbimeve që ofrojmë. Kemi për qëllim të ndihmojmë ndërtuesit të marrin produktet e duhura me cilësi të garantuar për projektet e tyre, duke u ofruar produkte si: blloka, cement, trigera, armatura, tjegulla, stiropor, e shume produkte te tjera. </p>
+    </div>
+</div>
+<div id="photo-container">
+    <div class="photo">
+        <img src="m1.jpg" alt="Foto 1">
+    </div>
+    <div class="photo">
+        <img src="m3.jpg" alt="Foto 2">
+    </div>
+    <div class="photo">
+        <img src="B1.jpg" alt="Foto 3">
+    </div>
+</div>
+<div id="text-container">
+    <p>Firma jonë ofron një gamë të gjerë të produkteve bujqësore dhe barnatoreve për të përmirësuar efikasitetin dhe cilësinë e bujqësisë. Me një përvojë të gjatë në tregun bujqësor, ne jemi specializuar në shpërndarjen e miellit, plehrave, farave dhe peletit. Faqja jonë furnizon informacione të detajuar rreth çdo produkti dhe ofron mundësinë e kontaktimit permes telefonit për të lehtësuar klientët tanë. Përveç kësaj, ne kemi barnatore bujqësore me produkte dhe pajisje të nevojshme për bujqësinë. Ekipi ynë i kualifikuar është gati t'ju ofrojë këshilla dhe ndihmë të specializuar për të ndihmuar klientët të arrisin sukses në bujqësi.</p>
+</div>
+    <div id="footer-container">
+        <p>Më shumë informacione rreth nesh mund të gjeni në faqen tonë zyrtare te facebook-ut.</p>
+    </div>
+
+    
+    <script>
+        // Load header content using fetch
+        fetch("header.html")
+            .then(response => response.text())
+            .then(content => {
+                document.getElementById("header-container").innerHTML = content;
+            })
+            .catch(error => {
+                console.error("Error loading header:", error);
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, .div {
+            background-color: rgb(157, 157, 157);
+            margin: 0;
+            padding: 0;
+        }
+       
+        .main-content {
+            background-color: #423a3a;
+        }
+    
+        .main-photo-container {
+            position: relative;
+        }
+    
+        .main-photo {
+            background-color: #423a3a;
+            display: block;
+            max-width: 50%;
+            margin: 10px;
+            float: left;
+           
+            border-radius: 8px;
+            padding: 10px;
+            transition: transform 0.3s, filter 0.3s;
+        }
+    
+        .centered-text {
+            font-style: italic;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    transition: background-color 0.3s, transform 0.3s, filter 0.3s;
+            }
+    
+     .centered-text p {
+    font-family: 'LUCIDA CALLIGRAPHY';
+    font-size: 22px;
+    color: white;
+          }
+
+     .centered-text b {
+    font-size: 28px;
+    color: #600101;
+       }
+
+    .centered-text:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+    filter: brightness(1.2); 
+     }
+    
+        #portfolio {
+            text-align: center;
+        }
+    
+        .portfolio-image {
+            display: inline-block;
+            max-width: 100%;
+            margin: 10px;
+            vertical-align: middle;
+            /* border: 2px solid #333; */
+            border-radius: 1px;
+            padding: 10px;
+            background-color: #423a3a;
+            color: #fff;
+        }
+    
+        .card {
+            margin-top: 0%;
+            padding-top: 0%;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Include the header content -->
+    <div id="header-container"></div>
+
+    <!-- Main Photo -->
+    <div id="main-photo-container" class="div">
+        <div id="main-photo-container">
+            <img src="main.jpg" alt="Main Photo" class="main-photo" onmousemove="movePhoto(event)">
+            <div class="centered-text"><p><b>QËNDRESA-AS</b> është burimi juaj i besueshëm për materiale ndërtimore dhe produkte bujqësore. Ne ofrojmë cilësi të lartë dhe shërbim të shkëlqyeshëm në dy pikat tona të shitjes në Banjë dhe Malishevë. Kemi një gamë të gjerë të produkteve bujqësore dhe materialeve të cilësisë së lartë, përdorim teknologjinë e fundit dhe sigurojmë transportin e sigurt dhe efikas. Bashkohuni me ne sot për të zbuluar përvojën e tregut të <b>QËNDRESA-AS</b>.</p></div>
+        </div>
+       
+    </div>
+
+    <div class="main-content div">
+        <!-- Page content -->
+        <div id="portfolio">
+            <img src="f6.jpg" alt="Ocean" class="portfolio-image" width="500px" height="300px">
+            <img src="malisheve.jpg" alt="Ocean II" class="portfolio-image" width="500px" height="300px">
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+
+
+    <!-- Include the footer content -->
+    <div id="footer-container"></div>
+
+    <!-- JavaScript to load header and footer -->
+    <script>
+        // Load header content
+        fetch("header.html")
+            .then(response => response.text())
+            .then(content => {
+                document.getElementById("header-container").innerHTML = content;
+            })
+            .catch(error => {
+                console.error("Error loading header:", error);
+            });
+
+       
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(content => {
+                document.getElementById("footer-container").innerHTML = content;
+            })
+            .catch(error => {
+                console.error("Error loading footer:", error);
+            });
+
+    
+    </script>
+</body>
+</html>

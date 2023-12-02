@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Product Showcase</title>
+    <style>
+        body {
+            font-family: 'GUNGSUH';
+
+            background-color: rgb(138, 138, 138);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            border: 5px solid #600101;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 5, 50);
+            margin: 20px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, filter 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product img {
+    width: 200px; 
+    height: 150px; 
+    margin-top: 10px;
+    margin-right: 20px; 
+    margin-bottom: 10px; 
+    margin-left: 55px; 
+}
+
+        .product h2 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .product p {
+            font-size: 1rem;
+        }
+
+        .product:hover {
+            transform: scale(1.05); /* Slightly scale up on hover */
+            filter: brightness(1.2);
+        }
+        #header-container {
+            background-color: #423a3a; /* Header background color */
+            width: 100%; /* Full width */
+            padding: 0px; /* Add padding for spacing */
+        }
+    </style>
+</head>
+<body>
+    <div id="header-container"></div>
+    <div class="product-container">
+        <div class="product">
+            <img src="giter.png" alt="Product 1">
+            <h2>Giter</h2>
+            <p>Perdoret per muratime te brendshme dhe te jashtme.</p>
+        </div>
+
+        <div class="product">
+            <img src="g5.jpg" alt="Product 2">
+            <h2>Gjysme-Giter</h2>
+            <p>Perdoret muratime te brendshme dhe te jashtme.</p>
+        </div>
+
+        <div class="product">
+            <img src="b12.jpg" alt="Product 3">
+            <h2>Bllok 12</h2>
+            <p>Perdoret per ndamje.</p>
+        </div>
+
+        <div class="product">
+            <img src="bbetoni.jpg" alt="Product 3">
+            <h2>Blloka te betonir</h2>
+            <p>Perdoret per muratime te jashtme.</p>
+        </div>
+
+        <div class="product">
+            <img src="boxhak.jpg" alt="Product 3">
+            <h2>Blloka per oxhak</h2>
+            <p>Kemi blloka per oxhak 16(i vogel) dhe 18(i madh).</p>
+        </div>
+        <div class="product">
+            <img src="nxemje.jpg" alt="Product 3">
+            <h2>Oxhak per nxemje</h2>
+            <p>Perdoren per nxmeje qendrore.</p>
+        </div>
+        <div class="product">
+            <img src="manta.jpg" alt="Product 3">
+            <h2>Manta</h2>
+            <p>Perodoren per pllaka.</p>
+        </div>
+        <div class="product">
+            <img src="tulla.jpg" alt="Product 3">
+            <h2>Tulla</h2>
+            <p>Perdoren per fasada.</p>
+        </div>
+    </div>
+
+    <script>
+        // Load header content using fetch
+        fetch("header.html")
+            .then(response => response.text())
+            .then(content => {
+                document.getElementById("header-container").innerHTML = content;
+            })
+            .catch(error => {
+                console.error("Error loading header:", error);
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Style the header */
+        .header {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .header .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        @keyframes rotate {
+    0% {
+        transform: rotateY(0deg); /* Rrotullo në fillim pa ndryshime */
+    }
+    50% {
+        transform: rotateY(180deg); /* Rrotullo 180 gradë në mes të animacionit */
+    }
+    100% {
+        transform: rotateY(360deg); /* Rrotullo 360 gradë (përsëritje e plotë) */
+    }
+}
+
+.header .logo img {
+    width: 100px; /* Rregulloni gjerësinë sipas nevojës */
+    height: auto; /* Ruani raportin e përmasave */
+    border-radius: 50%; /* Krijo formë të rrumbullakët */
+    animation: rotate 10s linear infinite; /* Aplikoni animacionin */
+}
+
+        .header .navbar {
+            list-style: none;
+            display: flex;
+        }
+
+        .header .navbar li {
+            margin-right: 20px;
+        }
+
+        .header .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'FOOTLIGHT MT LIGHT';
+        }
+
+        /* Style the dropdown menu */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000000;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Style the company name */
+/* Style the company name */
+.company-name {
+    font-family:'ALGERIAN';
+    color: #fefefe;
+    font-weight: bold;
+    margin-right: 20px; /* Adjust the margin as needed */
+    font-size: 34px; /* Increase the font size */
+    font-style: italic; /* Change the font style to italic */
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="flex">
+            <a href="#" class="logo"><img src="QAS.jpg" alt="Logo"></a>
+            <div class="company-name">QËNDRESA-AS</div>
+            <ul class="navbar">
+                <li><a href="home.html">Faqja kryesore</a></li>
+                <li class="dropdown">
+                    <a href="#">Material ndërtimor</a>
+                    <div class="dropdown-content">
+                        <a href="blloka.html">Blloka </a>
+                        <a href="hekur.html">Hekur, Trigera, Stiropor  </a>
+                        <a href="cement.html">Cement </a>
+                        <a href="tjegulla.html">Tjegulla</a>
+
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Prodhime bujqësore</a>
+                    <div class="dropdown-content">
+                        <a href="miell.html">Miell</a>
+                        <a href="fara.html">Plehera/Fara</a>
+                        <a href="kafshet.html">Ushqim per kafshe</a>
+                        <a href="pelet.html">Pelet</a>
+                    </div>
+                </li>
+                <li><a href="rrethNesh.html">Rreth nesh</a></li>
+                <li><a href="kontakti.html">Kontaktoni</a></li>
+            </ul>
+        </div>
+    </header>
+</body>
+     <script>
+        const header = document.querySelector('header');
+function fixedNavbar(){
+    header.classList.toggle('scroll', window.pageXOffset>0)
+}
+fixedNavbar();
+window.addEventListener('scroll', fixedNavbar);
+
+let menu=document.querySelector('#menu-btn');
+let userBtn=document.querySelector('#user-btn');
+
+menu.addEventListener('click', function(){
+    let nav =document.querySelector('.navbar');
+    nav.classList.toggle('active');
+})
+userBtn.addEventListener('click', function(){
+    let userBox =document.querySelector('.user-box');
+    userBox.classList.toggle('active');
+})
+    </script>
+</header>

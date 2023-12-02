@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Product Showcase</title>
+    <style>
+        body {
+            font-family: 'GUNGSUH';
+            background-color: rgb(157, 157, 157);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #header-container {
+            background-color: #423a3a; /* Header background color */
+            width: 100%; /* Full width */
+            padding: 0px; /* Add padding for spacing */
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            border: 5px solid #600101;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 5, 50);
+            margin: 20px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, filter 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product img {
+    width: 200px; 
+    height: 150px; 
+    margin-top: 10px;
+    margin-right: 20px; 
+    margin-bottom: 10px; 
+    margin-left: 55px; 
+}
+        .product h2 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .product p {
+            font-size: 1rem;
+        }
+
+        .product:hover {
+            transform: scale(1.05); /* Slightly scale up on hover */
+            filter: brightness(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="header-container"></div>
+    <div class="product-container">
+        <div class="product">
+            <img src="llakIZi.jpg" alt="Product 1"  >
+            <h2>Tjegulla me llak te zi</h2>
+        </div>
+
+        <div class="product">
+            <img src="kafe.jpg" alt="Product 2">
+            <h2>Tjegulla me llak kafe</h2>
+        </div>
+
+        <div class="product">
+            <img src="vishnje.PNG" alt="Product 3">
+            <h2>Tjegulla me llak vishnje</h2>
+        </div>
+        <div class="product">
+            <img src="natyrale.jpg" alt="Product 3">
+            <h2>Tjegulla me ngjyre natyrale</h2>
+        </div>
+
+        <div class="product">
+            <img src="samar.jpg" alt="Product 3">
+            <h2>Samar per kulm</h2>
+        </div>
+        <div class="product">
+            <img src="kapuqa.jpg" alt="Product 3">
+            <h2>Mbuloja per oxhak</h2>
+        </div>
+    </div>
+
+    <script>
+        // Load header content using fetch
+        fetch("header.html")
+            .then(response => response.text())
+            .then(content => {
+                document.getElementById("header-container").innerHTML = content;
+            })
+            .catch(error => {
+                console.error("Error loading header:", error);
+            });
+    </script>
+</body>
+</html>
